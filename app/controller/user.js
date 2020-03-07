@@ -22,8 +22,6 @@ class UserController extends Controller {
   async login() {
     const { ctx } = this
     const { username, password } = ctx.request.body
-    
-    console.log(username, password)
 
     let isRight = false
     USER_LIST.forEach((item, idx) => {
