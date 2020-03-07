@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= pageTitle %> </title>
+  <link href="https://cdn.bootcss.com/minireset.css/0.0.2/minireset.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+  <meta content="_csrf" name="csrf-param">
+  <meta content="<%= csrf %>" name="csrf-token">
+</head>
+<body>
+  <div id="app">
+    <%- body %> 
+  </div>
+
+</body>
+</html>

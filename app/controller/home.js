@@ -3,9 +3,16 @@
 const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
-  async index() {
-    const { ctx } = this;
-    ctx.body = 'hi, egg';
+  // 登录页
+  async login() {
+    const { ctx } = this
+    await ctx.render('/login', { pageTitle: '登录' })
+  }
+
+  // 消息列表页
+  async message() {
+    const { ctx } = this
+    await ctx.render('/message', { pageTitle: '首页' })
   }
 }
 

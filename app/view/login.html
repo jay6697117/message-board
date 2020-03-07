@@ -1,0 +1,31 @@
+<style>
+  .login{
+    color: red;
+  }
+</style>
+
+<div class="login">
+  这里是登录页
+  <div>
+    <button>登录</button>
+  </div>
+</div>
+
+<script>
+  $('button').click(function(){
+    $.get('/api/user/list', function(res){
+      console.log(res)
+      // location.href = '/main'
+    })
+    
+    var data = {
+      _csrf: '<%= csrf %>',
+      username: 'admin',
+      password: 'admin'
+    }
+    console.log(55555, data)
+    $.post('/api/user/login', data, function(res){
+      console.log('login', res)
+    })
+  })
+</script>

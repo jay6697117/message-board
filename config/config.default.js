@@ -16,7 +16,18 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1583567632002_6584';
 
   // add your middleware config here
-  config.middleware = [];
+  config.middleware = ['locals'];
+
+  config.view = {
+    defaultViewEngine: 'ejs',
+    mapping: {
+      '.html': 'ejs'
+    }
+  }
+
+  config.ejs = {
+    layout: 'layout.html',
+  };
 
   // add your user config here
   const userConfig = {
